@@ -65,6 +65,10 @@
           	<td>
           	<input type="button" id="no" value="No" onclick = "processYN('no')">
           	</td>
+
+                <td>
+                <input type="button" id="no" value="Restart" onclick = "restart()">
+                </td>
 			</tr>
 
           </table>
@@ -338,11 +342,13 @@
 				document.getElementById("yes").disabled = true;
 				document.getElementById("no").disabled = true;
 			}
+
+                        function restart()
+                        {
+                                location.reload()
+                        }
       // This function reloads the webpage
-      function restart()
-      {
-        location.reload();
-      }
+
 
         </script>
 
