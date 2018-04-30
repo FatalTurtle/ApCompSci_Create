@@ -54,7 +54,15 @@
 			<!-- Third row -->
 			<tr>
           	<td colspan="3"  align="center">
+<<<<<<< HEAD
 			<h3><label id = "question">Do you play League of Legends?</label></h3>
+=======
+<<<<<<< HEAD
+			<h3><label id = "question">Do you play League of Legends?</label></h3>
+=======
+			<h3><label id = "question">Have you ever played League?</label></h3>
+>>>>>>> 1c858e6440a916380b935458e170241e88674de2
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
 			</td>
 
           	<td>
@@ -70,6 +78,10 @@
           </div>
 
         <script>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
             var questionNumber = 0;  // This variable keeps track of which question is being processed.
           var League=false;
         	var Demacia=false;      // Assume that 'no' has been answered
@@ -80,6 +92,17 @@
           var Shurima=false;
           var Bilgewater=false;
         	var MAX_QUESTIONS=8;
+<<<<<<< HEAD
+=======
+=======
+            var questionNumber = 0;
+        	var baseball=false;
+        	var nationalLeague=false;
+        	var redUniforms=false;
+        	var ohio=false;
+        	var MAX_QUESTIONS=4;
+>>>>>>> 1c858e6440a916380b935458e170241e88674de2
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
 
         	// This function process 'yes' and 'no' responses for the various questions
         	function processYN(answer)
@@ -156,13 +179,21 @@
 		            if (League) // Yes, they do.
 		            {
 						document.getElementById("output").value = "Bring it on!\n";
+<<<<<<< HEAD
         				document.getElementById("icon").src = "Demacia.jpg";
+=======
+        				document.getElementById("icon").src = "mlb2Fit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
 						processDemaciaQuestion();
 		            }
 		            else // Well, maybe they like DOTA.
 		            {
 		               document.getElementById("output").value = "Stick with DOTA\n";
+<<<<<<< HEAD
         			   document.getElementById("icon").src = "Dota.gif";
+=======
+        			   document.getElementById("icon").src = "cricketFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
         			   disableApp();
 		            }
 		        }
@@ -181,13 +212,21 @@
 		            if (Demacia)
 		            {
                   document.getElementById("output").value = "You really don't know any lore do you?\n";
+<<<<<<< HEAD
                 document.getElementById("icon").src = "Defeat.gif";
+=======
+                document.getElementById("icon").src = "oriolesFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                     disableApp();
 		            }
 		            else
 		            {
                   document.getElementById("output").value = "Demacians infuse everything with petricite - a magic absorbing petrified wood\n";
+<<<<<<< HEAD
         				document.getElementById("icon").src = "Noxus.jpg";
+=======
+        				document.getElementById("icon").src = "NLFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
 		                processNoxusQuestion();
 		            }
 		        }
@@ -206,13 +245,21 @@
                 if (Noxus)
                 {
                   document.getElementById("output").value = "You better watch out for Swain - I think you made him angry\n";
+<<<<<<< HEAD
                 document.getElementById("icon").src = "Defeat.gif";
+=======
+                document.getElementById("icon").src = "NLFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                     disableApp();
                 }
                 else
                 {
                   document.getElementById("output").value = "Good Job!! It's actually Swain if you didn't know\n";
+<<<<<<< HEAD
                 document.getElementById("icon").src = "Zed.jpg";
+=======
+                document.getElementById("icon").src = "oriolesFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                     processIoniaQuestion();
                 }
             }
@@ -227,13 +274,21 @@
                 if (Ionia)
                 {
                     document.getElementById("output").value = "HOW DOES ZED LOOK LIKE A GOOD GUY????\n";
+<<<<<<< HEAD
                   document.getElementById("icon").src = "Defeat.gif";
+=======
+                  document.getElementById("icon").src = "NLFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                     disableApp();
                 }
                 else
                 {
                     document.getElementById("output").value = "Congrats! You probably could just get this from the picture of him though\n";
+<<<<<<< HEAD
                   document.getElementById("icon").src = "Piltover.jpg";
+=======
+                  document.getElementById("icon").src = "oriolesFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                       processPiltoverQuestion();
                 }
               }
@@ -249,13 +304,21 @@
                     if (Piltover)
                     {
                       document.getElementById("output").value = "Very Good! I'm impressed! If you just got lucky - it's Camille\n";
+<<<<<<< HEAD
                     document.getElementById("icon").src = "Viktor.jpg";
+=======
+                    document.getElementById("icon").src = "NLFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                         processZaunQuestion();
                     }
                     else
                     {
                       document.getElementById("output").value = "I really dont blame you for this one\n";
+<<<<<<< HEAD
                     document.getElementById("icon").src = "Defeat.gif";
+=======
+                    document.getElementById("icon").src = "oriolesFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                         disableApp();
                     }
                 }
@@ -272,13 +335,21 @@
                       if (Zaun)
                       {
                         document.getElementById("output").value = "This is suprisingly true - I had to read the story to find this out\n";
+<<<<<<< HEAD
                       document.getElementById("icon").src = "Shurima.jpg";
+=======
+                      document.getElementById("icon").src = "NLFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                           processShurimaQuestion();
                       }
                       else
                       {
                         document.getElementById("output").value = "Once again this one was hard. It definitely seems like Jayce should be the 'good guy'\n";
+<<<<<<< HEAD
                       document.getElementById("icon").src = "Defeat.gif";
+=======
+                      document.getElementById("icon").src = "oriolesFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                           disableApp();
                       }
                   }
@@ -295,13 +366,21 @@
                         if (Shurima)
                         {
                           document.getElementById("output").value = "HA I GOT YOU! Amumu was part of the first ruling family of Shurima. So it's not just Azir\n";
+<<<<<<< HEAD
                         document.getElementById("icon").src = "Defeat.gif";
+=======
+                        document.getElementById("icon").src = "NLFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                             disableApp();
                         }
                         else
                         {
                           document.getElementById("output").value = "Dang.... you must be an Amumu OTP. Or you were just really freaking lucky\n";
+<<<<<<< HEAD
                         document.getElementById("icon").src = "Gangplank.jpg";
+=======
+                        document.getElementById("icon").src = "oriolesFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                             processBilgewaterQuestion();
                         }
                     }
@@ -317,13 +396,21 @@
                           if (Bilgewater)
                           {
                             document.getElementById("output").value = "Yes. But one does not simply kill Gangplank. Good Job!!! You Win!!!\n";
+<<<<<<< HEAD
                           document.getElementById("icon").src = "Victory.gif";
+=======
+                          document.getElementById("icon").src = "NLFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                               disableApp();
                           }
                           else
                           {
                             document.getElementById("output").value = "WRONG! When he 'died' during the Burning Tides event he was temporarily removed from the game. You were SOOOOOOO close! Try again\n";
+<<<<<<< HEAD
                           document.getElementById("icon").src = "Defeat.gif";
+=======
+                          document.getElementById("icon").src = "oriolesFit.gif";
+>>>>>>> 859a2b9ba85a0dc0d24c81a0c71bdef2758c23b6
                               disableApp();
                           }
                       }
