@@ -7,15 +7,15 @@
 
         <style>
 		#title {
-		    background-color:lightgray;
-		    color:navy;
+		    background-color:darkblue;
+		    color:gold;
 		    text-align:center;
 		    padding:5px;
 		}
 
 		#middle {
-		    background-color:lightgray;
-		    color:red;
+		    background-color:darkblue;
+		    color:gold;
 		    font="Arial";
 		    text-align:center;
 		    padding:5px;
@@ -29,7 +29,7 @@
        	<div id="title">
 		<h1>League of Legends Trivia<br> </h1>
 		</div>
-		          	
+
 		<div id="middle">
 		<table border="0" cellpadding="7" cellspacing="0">
 
@@ -54,7 +54,7 @@
 			<!-- Third row -->
 			<tr>
           	<td colspan="3"  align="center">
-			<h3><label id = "question">Do you like America's pastime?</label></h3>
+			<h3><label id = "question">Do you play League of Legends?</label></h3>
 			</td>
 
           	<td>
@@ -71,11 +71,15 @@
 
         <script>
             var questionNumber = 0;  // This variable keeps track of which question is being processed.
-        	var baseball=false;      // Assume that 'no' has been answered
-        	var nationalLeague=false;
-        	var redUniforms=false;
-        	var ohio=false;
-        	var MAX_QUESTIONS=4;
+          var Laegue=false;
+        	var Demacia=false;      // Assume that 'no' has been answered
+        	var Noxus=false;
+        	var Ionia=false;
+        	var Piltover=false;
+          var Zaun=false;
+          var Shurima=false;
+          var Bilgewater=false;
+        	var MAX_QUESTIONS=9;
 
         	// This function process 'yes' and 'no' responses for the various questions
         	function processYN(answer)
@@ -87,18 +91,30 @@
         		{
         			switch (questionNumber)
 	        		{
-	        			case 0:
-	        				baseball = true;
-	        				break;
-	        			case 1:
-	        				nationalLeague = true;
+                case 0:
+                  League = true;
+                  break;
+                case 1:
+	        				Demacia = true;
 	        				break;
 	        			case 2:
-	        				redUniforms = true;
+	        				Noxus = true;
 	        				break;
 	        			case 3:
-	        				ohio = true;
+	        				Ionia = true;
 	        				break;
+	        			case 4:
+	        				Piltover = true;
+	        				break;
+                case 5:
+                  Zaun = true;
+                  break;
+                case 6:
+                  Shurima = true;
+                  break;
+                case 7:
+                  Bilgewater = true;
+                  break;
 	        			default:
 	        				break;
 	        		}
@@ -118,7 +134,7 @@
 
 		        if (questionNumber >= 1 && questionNumber <= MAX_QUESTIONS)
 		        {
-		            processBaseballQuestion();
+		            processLeagueQuestion();
 		        }
 		        else // Invalid Question Number
 		        {
@@ -131,21 +147,21 @@
 	         * This function processes the response to the 'baseball' question and
 	         * then navigates through the reamining line of questioning.
 	         */
-	        function processBaseballQuestion()
+	        function processLeagueQuestion()
 	        {
-	        	 // Does the user like baseball?
+	        	 // Does the user play LOL??
 
 		        if (questionNumber >= 1)
 		        {
-		            if (baseball) // Yes, they do.
+		            if (Leauge) // Yes, they do.
 		            {
-						document.getElementById("output").value += "Play Ball!\n";
+						document.getElementById("output").value += "Bring it on!\n";
         				document.getElementById("icon").src = "mlb2Fit.gif";
-						processLeagueQuestion();
+						processDemaciaQuestion();
 		            }
-		            else // Well, maybe they like cricket.
+		            else // Well, maybe they like DOTA.
 		            {
-		               document.getElementById("output").value += "Been to India lately?\n";
+		               document.getElementById("output").value += "Stick with DOTA\n";
         			   document.getElementById("icon").src = "cricketFit.gif";
         			   disableApp();
 		            }
@@ -156,39 +172,162 @@
 	         * This function processes the response to the 'league' question and
 	         * then navigates through the reamining line of questioning.
 	         */
-	        function processLeagueQuestion()
+	        function processDemaciaQuestion()
 	        {
-	        	document.getElementById("question").innerText = "Do you prefer the National League?";
+	        	document.getElementById("question").innerText = "Do the people of Demacia embrace magic?";
 
 	        	if (questionNumber >= 2)
 		        {
-		            if (nationalLeague)
+		            if (Demacia)
 		            {
-		            	document.getElementById("output").value += "Welcome to the Majors!\n";
-        				document.getElementById("icon").src = "NLFit.gif";
-		                processRedUniformQuestion();
+                  document.getElementById("output").value += "You really don't know any lore do you?\n";
+                document.getElementById("icon").src = "oriolesFit.gif";
+                    disableApp();
 		            }
 		            else
 		            {
-		            	document.getElementById("output").value += "Must be an Orioles fan.\n";
-        				document.getElementById("icon").src = "oriolesFit.gif";
-		                disableApp();
+                  document.getElementById("output").value += "Demacians infuse everything with petricite - a magic absorbing petrified wood\n";
+        				document.getElementById("icon").src = "NLFit.gif";
+		                processNoxusQuestion();
 		            }
 		        }
 	        }
 
 	        /*
-	         * This function processes the response to the 'uniform' question and
+	         * This function processes the response to the 'league' question and
 	         * then navigates through the reamining line of questioning.
 	         */
-	        function processRedUniformQuestion()
+	        function processNoxusQuestion()
 	        {
-	        	document.getElementById("question").innerText = "Do you like red uniforms?";
+	        	document.getElementById("question").innerText = "Is Darius the commander of Noxus?";
 
-	        	// Continue with the line of questioning.
-	        	//
+            if (questionNumber >= 3)
+            {
+                if (Noxus)
+                {
+                  document.getElementById("output").value += "You better watch out for Swain - I think you made him angry\n";
+                document.getElementById("icon").src = "NLFit.gif";
+                    disableApp();
+                }
+                else
+                {
+                  document.getElementById("output").value += "Good Job!! It's actually Swain if you didn't know\n";
+                document.getElementById("icon").src = "oriolesFit.gif";
+                    processIoniaQuestion();
+                }
+            }
+          }
 
-	        }
+          function processIoniaQuestion()
+  	      {
+  	      	document.getElementById("question").innerText = "Is Zed a good guy?";
+
+            if (questionNumber >= 4)
+            {
+                if (Ionia)
+                {
+                    document.getElementById("output").value += "HOW DOES ZED LOOK LIKE A GOOD GUY????\n";
+                  document.getElementById("icon").src = "NLFit.gif";
+                    disableApp();
+                }
+                else
+                {
+                    document.getElementById("output").value += "Congrats! You probably could just get this from the picture of him though\n";
+                  document.getElementById("icon").src = "oriolesFit.gif";
+                      processPiltoverQuestion();
+                }
+              }
+            }
+
+
+            function processPiltoverQuestion()
+    	        {
+    	        	document.getElementById("question").innerText = "Is The Steel Shadow from Piltover?";
+
+                if (questionNumber >= 5)
+                {
+                    if (Piltover)
+                    {
+                      document.getElementById("output").value += "Very Good! I'm impressed! If you just got lucky - it's Camille\n";
+                    document.getElementById("icon").src = "NLFit.gif";
+                        processZaunQuestion();
+                    }
+                    else
+                    {
+                      document.getElementById("output").value += "I really dont blame you for this one\n";
+                    document.getElementById("icon").src = "oriolesFit.gif";
+                        disableApp();
+                    }
+                }
+              }
+
+
+
+            function processZaunQuestion()
+      	        {
+      	        	document.getElementById("question").innerText = "Is Viktor a good guy?";
+
+                  if (questionNumber >= 6)
+                  {
+                      if (Zaun)
+                      {
+                        document.getElementById("output").value += "This is suprisingly true - I had to read the story to find this out\n";
+                      document.getElementById("icon").src = "NLFit.gif";
+                          processShurimaQuestion();
+                      }
+                      else
+                      {
+                        document.getElementById("output").value += "Once again this one was hard. It definitely seems like Jayce should be the 'good guy'\n";
+                      document.getElementById("icon").src = "oriolesFit.gif";
+                          disableApp();
+                      }
+                  }
+                }
+
+
+
+            function processShurimaQuestion()
+        	        {
+        	        	document.getElementById("question").innerText = "There is only one champion in the game who was an emperor of Shurima";
+
+                    if (questionNumber >= 7)
+                    {
+                        if (Shurima)
+                        {
+                          document.getElementById("output").value += "HA I GOT YOU! Amumu was part of the first ruling family of Shurima. So it's not just Azir\n";
+                        document.getElementById("icon").src = "NLFit.gif";
+                            disableApp();
+                        }
+                        else
+                        {
+                          document.getElementById("output").value += "Dang.... you must be an Amumu OTP. Or you were just really freaking lucky\n";
+                        document.getElementById("icon").src = "oriolesFit.gif";
+                            processBilgewaterQuestion();
+                        }
+                    }
+                  }
+
+
+              function processNoxusQuestion()
+          	        {
+          	        	document.getElementById("question").innerText = "Was Gangplank ever removed from the game?";
+
+                      if (questionNumber >= 8)
+                      {
+                          if (Bilgewater)
+                          {
+                            document.getElementById("output").value += "Yes. But one does not simply kill Gangplank. Good Job!!! You Win!!!\n";
+                          document.getElementById("icon").src = "NLFit.gif";
+                              disableApp();
+                          }
+                          else
+                          {
+                            document.getElementById("output").value += "WRONG! When he 'died' during the Burning Tides event he was temporarily removed from the game. You were SOOOOOOO close! Try again\n";
+                          document.getElementById("icon").src = "oriolesFit.gif";
+                              disableApp();
+                          }
+                      }
+	                   }
 
 			// This function disables the user input.
 			function disableApp()
@@ -196,6 +335,11 @@
 				document.getElementById("yes").disabled = true;
 				document.getElementById("no").disabled = true;
 			}
+      // This function reloads the webpage
+      function restart()
+      {
+        location.reload();
+      }
 
         </script>
 
