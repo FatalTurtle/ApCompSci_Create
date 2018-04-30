@@ -54,7 +54,11 @@
 			<!-- Third row -->
 			<tr>
           	<td colspan="3"  align="center">
+<<<<<<< HEAD
 			<h3><label id = "question">Do you play League of Legends?</label></h3>
+=======
+			<h3><label id = "question">Have you ever played League?</label></h3>
+>>>>>>> 1c858e6440a916380b935458e170241e88674de2
 			</td>
 
           	<td>
@@ -70,6 +74,7 @@
           </div>
 
         <script>
+<<<<<<< HEAD
             var questionNumber = 0;  // This variable keeps track of which question is being processed.
           var League=false;
         	var Demacia=false;      // Assume that 'no' has been answered
@@ -80,8 +85,15 @@
           var Shurima=false;
           var Bilgewater=false;
         	var MAX_QUESTIONS=8;
+=======
+            var questionNumber = 0;
+        	var baseball=false;
+        	var nationalLeague=false;
+        	var redUniforms=false;
+        	var ohio=false;
+        	var MAX_QUESTIONS=4;
+>>>>>>> 1c858e6440a916380b935458e170241e88674de2
 
-        	// This function process 'yes' and 'no' responses for the various questions
         	function processYN(answer)
         	{
         		// Use this to print debugging diagnostics.
@@ -124,13 +136,10 @@
         		processResponse();
         	}
 
-        	// This function processes the 'yes' and 'no' responses and navigates the program logic flow.
         	function processResponse()
         	{
-        		// Clear out the response text area.
         		document.getElementById("output").value = "";
 
-        		// Check for a valid question number range.
 
 		        if (questionNumber >= 1 && questionNumber <= MAX_QUESTIONS)
 		        {
