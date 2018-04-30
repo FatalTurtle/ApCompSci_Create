@@ -3,8 +3,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Helper Project</title>
-        
+        <title>League of Legends Trivia</title>
+
         <style>
 		#title {
 		    background-color:lightgray;
@@ -12,7 +12,7 @@
 		    text-align:center;
 		    padding:5px;
 		}
-		
+
 		#middle {
 		    background-color:lightgray;
 		    color:red;
@@ -21,25 +21,25 @@
 		    padding:5px;
 		}
 		</style>
-    
+
     </head>
-    
+
     <body>
-    	
+
        	<div id="title">
-		<h1>Baseball Helper<br> (Starter Demo)</h1>
+		<h1>League of Legends Trivia<br> </h1>
 		</div>
 		          	
 		<div id="middle">
 		<table border="0" cellpadding="7" cellspacing="0">
-			
+
 			<!-- First row -->
 			<tr>
           	<td colspan="2" rowspan="2">
           	<textarea id="output" cols = "30" rows = "10" name="outputText"></textarea>
           	</td>
           	</tr>
-         
+
             <!-- Second row -->
          	<tr>
           	<td colspan="3">
@@ -50,25 +50,25 @@
 			border      = "0">
 			</td>
 			</tr>
-			
+
 			<!-- Third row -->
 			<tr>
           	<td colspan="3"  align="center">
 			<h3><label id = "question">Do you like America's pastime?</label></h3>
 			</td>
-          
+
           	<td>
-          	<input type="button" id="yes" value="Yes" onclick = "processYN('yes')">	
+          	<input type="button" id="yes" value="Yes" onclick = "processYN('yes')">
           	</td>
-          	
+
           	<td>
-          	<input type="button" id="no" value="No" onclick = "processYN('no')">	
+          	<input type="button" id="no" value="No" onclick = "processYN('no')">
           	</td>
 			</tr>
-            
+
           </table>
           </div>
-		
+
         <script>
             var questionNumber = 0;  // This variable keeps track of which question is being processed.
         	var baseball=false;      // Assume that 'no' has been answered
@@ -76,13 +76,13 @@
         	var redUniforms=false;
         	var ohio=false;
         	var MAX_QUESTIONS=4;
-        	
+
         	// This function process 'yes' and 'no' responses for the various questions
-        	function processYN(answer) 
+        	function processYN(answer)
         	{
         		// Use this to print debugging diagnostics.
         		//document.getElementById("output").value = "DEBUG: " + answer;
-        		
+
         		if (answer == "yes")
         		{
         			switch (questionNumber)
@@ -103,19 +103,19 @@
 	        				break;
 	        		}
         		}
-        		
+
         		questionNumber++;
-        		processResponse();	
+        		processResponse();
         	}
-        	
+
         	// This function processes the 'yes' and 'no' responses and navigates the program logic flow.
-        	function processResponse() 
+        	function processResponse()
         	{
         		// Clear out the response text area.
         		document.getElementById("output").value = "";
-        		
+
         		// Check for a valid question number range.
-        
+
 		        if (questionNumber >= 1 && questionNumber <= MAX_QUESTIONS)
 		        {
 		            processBaseballQuestion();
@@ -126,15 +126,15 @@
 		        	disableApp();
 		        }
 	        }
-	        
-	        /* 
+
+	        /*
 	         * This function processes the response to the 'baseball' question and
 	         * then navigates through the reamining line of questioning.
 	         */
 	        function processBaseballQuestion()
 	        {
 	        	 // Does the user like baseball?
-            
+
 		        if (questionNumber >= 1)
 		        {
 		            if (baseball) // Yes, they do.
@@ -151,15 +151,15 @@
 		            }
 		        }
 	        }
-	        
-	        /* 
+
+	        /*
 	         * This function processes the response to the 'league' question and
 	         * then navigates through the reamining line of questioning.
 	         */
 	        function processLeagueQuestion()
 	        {
 	        	document.getElementById("question").innerText = "Do you prefer the National League?";
-	        	
+
 	        	if (questionNumber >= 2)
 		        {
 		            if (nationalLeague)
@@ -176,27 +176,27 @@
 		            }
 		        }
 	        }
-	        
-	        /* 
+
+	        /*
 	         * This function processes the response to the 'uniform' question and
 	         * then navigates through the reamining line of questioning.
 	         */
 	        function processRedUniformQuestion()
 	        {
 	        	document.getElementById("question").innerText = "Do you like red uniforms?";
-	        	
+
 	        	// Continue with the line of questioning.
 	        	//
-	        	
+
 	        }
-			
+
 			// This function disables the user input.
 			function disableApp()
 			{
 				document.getElementById("yes").disabled = true;
 				document.getElementById("no").disabled = true;
 			}
-			
+
         </script>
 
     </body>
